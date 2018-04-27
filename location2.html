@@ -1,0 +1,29 @@
+<html>
+ <head>
+   <meta charset = "utf-8">
+   <title>Drawing Lines</title>
+ </head>
+ <body>
+  
+
+   <script>
+     if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+} else {
+    alert('location not supported');
+}
+
+//callbacks
+function error(msg) {
+    alert('error in geolocation');
+}
+
+function success(position) {
+    var lats = position.coords.latitude;
+    var lngs = position.coords.longitude;
+    alert(lats);
+    alert(lngs)
+};
+   </script>
+ </body>
+</html>
