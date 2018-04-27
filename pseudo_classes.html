@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+a:link
+{ color:blue; }
+a:visited
+{ color:green; }
+a:hover
+{ color:pink; }
+a:active
+{ color:red; }
+
+p:first-of-type
+{ color:blue; font-size:20px; }
+p:nth-of-type(2)
+{ color:green; font-size:20px;}
+p:nth-of-type(3)
+{ color:hotpink; font-size:20px;}
+p:nth-of-type(4)
+{ color:red; font-size:20px;}
+
+input[type=text]:enabled
+{ background-color:pink;  }
+input[type=text]:disabled
+{ background-color:yellow;  }
+
+p.lang(fr)
+{
+quotes: "<" ">" "<<" ">>"
+}
+
+:target {border:2px solid black; }
+</style>
+</head>
+<body>
+<h1>PSEUDO CLASSES</h1>
+<a href="https://www.google.com">CLICK HERE...</a>
+<p>BLUE WHEN UNVISITED</p>
+<p>GREEN WHEN VISITED</p>
+<p>PINK WHEN HOVERED</p>
+<p>RED WHEN ACTIVE</p>
+
+<form>
+FIRSTNAME<input type="text" name="text1"><br>
+COUNTRY<input type="text" name="text2" placeholder="INDIA" disabled=disabled><br><br><br>
+<input type="radio" checked="checked" value="female" name="gender">
+<input type="radio" value="male" name="gender">
+</form>
+<br><br>
+<p><a href="#news1">CLICK</a></p>
+<p>SOME TEXT<q lang="fr">NEGATION PSEUDO CLASSES</q>SOME TEXT</p>
+<p id="news1">NEW</p>
+</body>
+</html>

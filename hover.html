@@ -1,0 +1,34 @@
+<html>
+<head>
+<style>
+.change
+{
+width:500px; 
+height:500px;
+position:relative;
+margin-left:150px;
+}
+.change img
+{
+height:500px;
+width:500px;
+position:absolute;
+transition: 2s ease-in-out;
+}
+.change img.top:hover
+{
+opacity:0;
+}
+.change img.bottom:hover
+{
+opacity:0;
+}
+</style>
+</head>
+<body>
+<div class="change">
+<img class="bottom" src="1.png">
+<img class="top" src="2.png">
+</div>
+</body>
+</html>

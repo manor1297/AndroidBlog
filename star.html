@@ -1,0 +1,39 @@
+<html>
+ <head>
+   <meta charset = "utf-8">
+   <title>Drawing Lines</title>
+ </head>
+ <body>
+   <canvas id = "drawLines" width = "400" height = "200" 
+     style = "border: 1px solid Black;">
+   </canvas>
+
+   <script>
+     var canvas = document.getElementById("drawLines");
+     var ctx = canvas.getContext("2d")
+
+	     function star(R, cX, cY, N) {
+	  //star draw
+	  ctx.beginPath();
+	  ctx.moveTo(cX + R,cY);
+	  for(var i = 1; i <= N * 2; i++)
+	  {
+	    if(i % 2 == 0){
+	      var theta = i * (Math.PI * 2) / (N * 2);
+	      var x = cX + (R * Math.cos(theta));
+	      var y = cY + (R * Math.sin(theta));
+	    } else {
+	      var theta = i * (Math.PI * 2) / (N * 2);
+	      var x = cX + ((R/2) * Math.cos(theta));
+	      var y = cY + ((R/2) * Math.sin(theta));
+	    }
+
+	    ctx.lineTo(x ,y);
+	  }
+	  ctx.closePath();
+	  ctx.stroke();
+	}
+	star(10,20,20,5);
+   </script>
+ </body>
+</html>
